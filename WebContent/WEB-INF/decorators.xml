@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<decorators defaultdir="/decorator">
+<!-- /mode12/member/* : me,jsp 상관없이  -->
+<decorator name="main" page="decorator.jsp">
+<pattern>/model2/member/*</pattern>
+<pattern>/model2/board/*</pattern>
+</decorator>
+<excludes>
+</excludes>
+</decorators>
