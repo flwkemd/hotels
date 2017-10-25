@@ -10,7 +10,7 @@ public class Logout implements Action {
 		String login= (String)request.getSession().getAttribute("login");
 		request.getSession().invalidate();
 		request.setAttribute("msg", login+"´ÔÀÌ ·Î±×¾Æ¿ô ÇÏ¼Ì½À´Ï´Ù.");
-		request.setAttribute("url", "loginForm.jsp");
+		request.setAttribute("url", "first.jsp");
 		return new ActionForward(false,"../alert.jsp");
 	}
 

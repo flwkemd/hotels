@@ -12,9 +12,9 @@ public class Main implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String login = (String) request.getSession().getAttribute("login");
 		if (login==null || login.equals("login"))
-			return new ActionForward(true,"loginForm.me");
+			return new ActionForward(true,"first.jsp");
 		else
-			return new ActionForward(false,"main.jsp");
+			return new ActionForward(false,"first.jsp");
 	}
 
 }

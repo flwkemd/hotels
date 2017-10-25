@@ -1,4 +1,72 @@
+
+body {
+  padding-top: 95px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 95px;
+  }
+}
+
 #mainImg {
     width: -webkit-fill-available;
     padding-top:25px;
+}
+
+#mainHome{
+	color:red;
+	font-size: -webkit-xxx-large;
+}
+
+#navSub{
+	color:black;
+	font-size: larger;
+}
+
+#loginBtn{
+	width: -webkit-fill-available;
+}
+
+#thead{
+	background-color: lightgray;
+}
+
+#tableList{
+	padding-top: 20px;
+}
+
+.ul.loginfieldset li {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 9px 0 13px;
+}
+
+.panel-body .login ul{
+	display: block;
+    margin: 5px 5px 5px 3px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    -webkit-padding-start: 0px;
+}
+
+.panel-body .login li{
+	display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 9px 0 9px;
+}
+
+
+#panelT{
+	text-align: center;
+	padding-top:10px;
+    padding-bottom: 10px;
+    color: slategray;
+}
+
+#mainH2{
+	padding-top:15px;
 }

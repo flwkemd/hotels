@@ -77,55 +77,46 @@
         </div>
       </div>
     </nav>
-<body>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-				<div class="table-board" id="tableList">
-				<table class="table table-bordered table-hover">
-				<thead id="thead">
-					<tr>
-						<th>아이디</th>
-						<th>이름</th>
-						<th>닉네임</th>
-						<th>장소</th>
-						<th>전화번호</th>
-						<th>수정/탈퇴</th>
-					</tr>
-				</thead>
-				<tbody>
-				<c:forEach var="mem" items="${list}">
-					<tr>
-						<td><a href="info.me?id=${mem.id}">${mem.id}</a></td>
-						<td>${mem.name}</td>
-						<td>${(mem.nickname)}</td>
-						<td>${mem.place}</td>
-						<td>${mem.regnumber}</td>
-						<td><a href="updateForm.me?id=${mem.id}">수정 /</a>
-						<a href="delete.me?id=${mem.id}">강제탈퇴</a></td>
-					</tr>
-				</c:forEach>	
-				</tbody>
-				</table>
-				</div>
-				</div>
-			</div>
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
+
+        <!-- mainImg -->
+        <div class="col-md-8">
+          	<img id="mainImg" src="img/0.jpg">
+         </div>
+         
+         <!-- loginForm -->
+         <div class="col-md-4"> 
+           <c:if test="${empty sessionScope.login}">
+	          <div class="card my-4">
+	          <form class="form1" action = "loginCheck.me" method="post">
+	            <div class="card-body">
+	                <input type="text" class="form-control" name="id" placeholder="아이디"><br>
+	                <input type="password" class="form-control" name="password" placeholder="비밀번호">
+	            </div>
+	               <input class="btn btn-danger pull-right" id="loginBtn" type="submit" value="로그인">
+	           </form>
+	           </div>
+	         	<span>비밀번호를 잊으셨거나, 변경이 필요하신가요?</span><br>
+	         	<p style="text-align: center;"><a href="#">비밀번호 재설정</a></p>
+          </c:if>	
+         	<h2 id="mainH2">호텔 예약 사이트 추천</h2>
+         	<a href="#">www.hotelscombined.co.kr</a><br><br>
+         	<a href="#">www.booking.com</a><br><br>
+         	<a href="#">www.expedia.co.kr</a><br><br>
+         	<a href="#">www.hotelnjoy.com</a>
 		</div>
-				
-<%-- <table border="1" cellpadding="0" cellspacing="0">
-<caption>회원목록</caption>
-<tr><td>아이디</td><th>이름</th><th>닉네임</th>
-<th>장소</th><th>핸드폰번호</th><th>&nbsp;</th></tr>
-<c:forEach var="mem" items="${list}">
-<tr><td><a href="info.me?id=${mem.id}">${mem.id}</a></td>
-<td>${mem.name}</td>
-<td>${(mem.nickname)}</td>
-<td>${mem.place}</td><td>${mem.regnumber}</td>
-<td><a href="updateForm.me?id=${mem.id}">수정</a>
-<a href="delete.me?id=${mem.id}">강제탈퇴</a>
-</td></tr>
-</c:forEach>
-</table> --%>
-</body>
+		
+		</div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>

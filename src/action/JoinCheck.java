@@ -22,7 +22,7 @@ public class JoinCheck implements Action {
 		mem.setRegnumber(request.getParameter("regnumber"));
       System.out.println(mem);
       mdao.insert(mem);
-      return new ActionForward(true,"loginForm.me");
+      return new ActionForward(true,"main.me");
    }
 
 }
