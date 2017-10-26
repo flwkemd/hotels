@@ -4,15 +4,15 @@
 <mapper namespace="mapper.BoardMapper">
 	<select id="list" parameterType="map" resultType="Board">
 		select * from
-		(select rownum rnum, num, name, subject,
-		content, file1, regdate, ref, reflevel,
-		refstep, pass, readcnt from
-		( select * from board
-		order by ref desc,refstep asc ))
+		(select rownum rnum, num, id,
+		date1, files, btype, btype, subtype,
+		content, subject, readcnt, ref, reflevel, refstep from
+		( select * from board2
+		order by ref desc,refstep asc))
 		where rnum >=#{startrow} and rnum &lt;= #{endrow}
 	</select>
 	<select id="boardcnt2" parameterType="map" resultType="int">
-		select count(*) from board
+		select count(*) from board2
 		<if test="column != null">
 			where ${column} like '%${find}%'
 		</if>

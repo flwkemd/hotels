@@ -15,7 +15,7 @@ public interface MemberMapper {
 			+"#{place},#{regnumber})")
 	void insert(Member member);
 	
-	@Update("update member set password=#{password},name=#{name},nickname=#{nickname},place=#{place},regnumber=#{regnumber} where id=#{id}")
+	@Update("update joins set password=#{password},name=#{name},nickname=#{nickname},place=#{place},regnumber=#{regnumber} where id=#{id}")
 	int update(Member m);
 	
 	@Delete("delete from joins where id=#{id}")

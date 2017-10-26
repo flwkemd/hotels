@@ -13,7 +13,7 @@ public class UpdateCheck extends UserLoginAction {
 		Member mem = new Member();
 		mem.setId(request.getParameter("id"));
 		mem.setName(request.getParameter("name"));
-		mem.setNickname(request.getParameter("Nickname"));
+		mem.setNickname(request.getParameter("nickname"));
 		mem.setPassword(request.getParameter("password"));
 		mem.setPlace(request.getParameter("place"));
 		mem.setRegnumber(request.getParameter("regnumber"));

@@ -24,8 +24,8 @@ public class BoardDao {
 	 */
 	public static final String ns = "mapper.BoardMapper.";
 	public boolean insert(Board board){
-		if(board.getFile1()==null) {
-			board.setFile1("");
+		if(board.getFiles()==null) {
+			board.setFiles("");
 		}
 		SqlSession session = DBConnection.getSession();
 		try{
@@ -33,7 +33,6 @@ public class BoardDao {
 			int num = session.getMapper(BoardMapper.class).maxnum();
 			num++;
 			board.setNum(num);
-			board.setRef(num);
 			session.getMapper(BoardMapper.class).insert(board);
 			return true;
 		}catch(Exception e){
@@ -75,6 +74,7 @@ public class BoardDao {
 			DBConnection.close(session);
 		}
 	}
+	
 	public Board selectOne(int num){
 		SqlSession session = DBConnection.getSession(); 
 		try{
@@ -86,6 +86,7 @@ public class BoardDao {
 		}
 		return null;
 	}
+	
 	public void addReadCnt(int num){
 		SqlSession session = DBConnection.getSession(); 
 		try{
@@ -96,6 +97,7 @@ public class BoardDao {
 			DBConnection.close(session);
 		}	
 	}
+
 	public boolean update(Board board) {
 		SqlSession session = DBConnection.getSession(); 
 		try {
@@ -106,6 +108,7 @@ public class BoardDao {
 			DBConnection.close(session);
 		} return false;
 	}
+	
 	public boolean delete(int num){
 		SqlSession session = DBConnection.getSession(); 
 		
@@ -120,6 +123,7 @@ public class BoardDao {
 		return false;
 
 	}
+	
 	public boolean reply(Board board) {
 		SqlSession session = DBConnection.getSession(); 
 		int num = 0;
@@ -136,7 +140,7 @@ public class BoardDao {
 			board.setRef(ref);
 			board.setReflevel(++reflevel);
 			board.setRefstep(++refstep);
-			board.setFile1("");
+			board.setFiles("");
 			num = session.getMapper(BoardMapper.class).maxnum();
 			num++;
 			board.setNum(num);

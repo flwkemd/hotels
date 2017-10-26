@@ -4,81 +4,131 @@ import java.util.Date;
 
 public class Board {
 	private int num;
-	private String name;
-	private String pass;
-	private String subject;
+	private String id;
+	private Date date;
+	private String files;
+	private String btype;
+	private String subtype;
 	private String content;
-	private String file1;
-	private Date regdate;
+	private String subject;
 	private int readcnt;
 	private int ref;
 	private int reflevel;
 	private int refstep;
-	public int getNum() {
-		return num;
+
+	public Board() {
 	}
-	public void setNum(int num) {
+
+	public Board(int num, String id, Date date, String files, String btype, String subtype,
+			String content, String subject, int readcnt, int ref, int reflevel, int refstep) {
 		this.num = num;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPass() {
-		return pass;
-	}
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-	public String getSubject() {
-		return subject;
-	}
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
+		this.id = id;
+		this.date = date;
+		this.files = files;
+		this.btype = btype;
+		this.subtype = subtype;
 		this.content = content;
-	}
-	public String getFile1() {
-		return file1;
-	}
-	public void setFile1(String file1) {
-		this.file1 = file1;
-	}
-	public Date getRegdate() {
-		return regdate;
-	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
-	}
-	public int getReadcnt() {
-		return readcnt;
-	}
-	public void setReadcnt(int readcnt) {
+		this.subject = subject;
 		this.readcnt = readcnt;
-	}
-	public int getRef() {
-		return ref;
-	}
-	public void setRef(int ref) {
 		this.ref = ref;
-	}
-	public int getReflevel() {
-		return reflevel;
-	}
-	public void setReflevel(int reflevel) {
 		this.reflevel = reflevel;
-	}
-	public int getRefstep() {
-		return refstep;
-	}
-	public void setRefstep(int refstep) {
 		this.refstep = refstep;
 	}
 
+	public int getNum() {
+		return num;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public String getFiles() {
+		return files;
+	}
+
+	public String getBtype() {
+		return btype;
+	}
+
+	public String getSubtype() {
+		return subtype;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public int getReadcnt() {
+		return readcnt;
+	}
+
+	public int getRef() {
+		return ref;
+	}
+
+	public int getReflevel() {
+		return reflevel;
+	}
+
+	public int getRefstep() {
+		return refstep;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public void setFiles(String files) {
+		this.files = files;
+	}
+
+	public void setBtype(String btype) {
+		this.btype = btype;
+	}
+
+	public void setSubtype(String subtype) {
+		this.subtype = subtype;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public void setReadcnt(int readcnt) {
+		this.readcnt = readcnt;
+	}
+
+	public void setRef(int ref) {
+		this.ref = ref;
+	}
+
+	public void setReflevel(int reflevel) {
+		this.reflevel = reflevel;
+	}
+
+	public void setRefstep(int refstep) {
+		this.refstep = refstep;
+	}
+	
 }

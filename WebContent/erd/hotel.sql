@@ -8,29 +8,45 @@ DROP TABLE JOINS CASCADE CONSTRAINTS;
 
 
 /* Create Tables */
+CREATE TABLE board2
+(
+	num number(20) NOT NULL,
+	id varchar2(20) NOT NULL,
+	place varchar2(100),
+	date1 date,
+	files varchar2(500),
+	btype varchar2(20),
+	subtype varchar2(10),
+	content varchar2(500),
+	subject varchar2(100),
+  readcnt number(4),
+  ref number(4),
+  reflevel number(4),
+  refstep number(4),
+	PRIMARY KEY (num)
+);
+
 
 CREATE TABLE board2
 (
 	-- 게시물번호
 	num number(100) NOT NULL,
-	ID varchar2(20) NOT NULL,
+	id varchar2(20) NOT NULL,
 	-- 장소
 	place varchar2(100),
-	date date,
+	date1 date,
 	-- 첨부파일
 	files varchar2(500),
 	-- 1.호텔소개
 	-- 2.후기게시판
 	-- 3.Q&A
 	-- 4.자유게시판
-	btype number(20),
+	btype varchar2(20),
 	-- 1.강남
 	-- 2.강동
 	-- 3.강서
 	-- 4.강북
 	subtype varchar2(10),
-	-- 답변글
-	ref varchar2(200),
 	-- 글내용
 	-- 
 	content varchar2(500),
@@ -73,7 +89,6 @@ COMMENT ON COLUMN board2.subtype IS '1.강남
 2.강동
 3.강서
 4.강북';
-COMMENT ON COLUMN board2.ref IS '답변글';
 COMMENT ON COLUMN board2.content IS '글내용
 ';
 COMMENT ON COLUMN board2.subject IS '제목

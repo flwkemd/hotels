@@ -70,3 +70,7 @@ body {
 #mainH2{
 	padding-top:15px;
 }
+
+#updateGroup{
+	display: -webkit-inline-box;
+}

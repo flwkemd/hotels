@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-left">
             <li class="nav-item">
-              <a id="navSub" class="nav-link" href="#">호텔소개
+              <a id="navSub" class="nav-link" href="${path}/model2/board/writeForm.bo">호텔소개
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -108,7 +108,6 @@
          	<a href="#">www.expedia.co.kr</a><br><br>
          	<a href="#">www.hotelnjoy.com</a>
 		</div>
-		
 		</div>
     </div>
     <!-- /.container -->

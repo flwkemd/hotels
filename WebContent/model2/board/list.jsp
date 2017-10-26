@@ -56,10 +56,10 @@
             <c:set var="boardNum" value="${boardNum -1}" />
             <td align="left">
             <%--el, jstl을 사용하여 첨부파일, 답변글 표시하기. --%>
-            <c:if test="${!empty board.file1}">
-            <a href="./file/${board.file1 }">@</a>
+            <c:if test="${!empty board.files}">
+            <a href="./file/${board.files }">@</a>
             </c:if>
-            <c:if test="${empty board.file1 }">
+            <c:if test="${empty board.files }">
             &nbsp;&nbsp;&nbsp;</c:if>
             <c:forEach var="a" begin="1" end="${board.reflevel }">
             &nbsp;&nbsp;</c:forEach>
@@ -67,13 +67,13 @@
             <a href="info.bo?num=${board.num}&pageNum=${pageNum}">
                   ${board.subject }</a></td>
             <td>${board.name }</td>
-            <td><fmt:formatDate value="${board.regdate }" var="regdate" pattern="yyyy-MM-dd" />
-            <c:if test="${today==regdate }">
-            <fmt:formatDate value="${board.regdate }" pattern="HH:mm:ss" />
-            </c:if> <c:if test="${today!=regdate }">
-            <fmt:formatDate value="${board.regdate }" pattern="yyyy-MM-dd:mm" />
+            <td><fmt:formatDate value="${board.date1 }" var="regdate" pattern="yyyy-MM-dd" />
+            <c:if test="${today==date1 }">
+            <fmt:formatDate value="${board.date1 }" pattern="HH:mm:ss" />
+            </c:if> <c:if test="${today!=date1 }">
+            <fmt:formatDate value="${board.date1 }" pattern="yyyy-MM-dd:mm" />
             </c:if></td>
-            <td>${board.regdate }</td>
+            <td>${board.date1 }</td>
             <td>${board.readcnt }</td>
          </tr>
       </c:forEach>
