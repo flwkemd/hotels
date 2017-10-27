@@ -19,7 +19,7 @@ import action.Action;
 import action.ActionForward;
 
 
-@WebServlet(urlPatterns= {"*.me"}, initParams= {@WebInitParam(name="properties",value="C:\\Users\\flwke\\Downloads\\SHINSEUNGBUM (2)\\WebContent\\WEB-INF\\action.properties")})
+@WebServlet(urlPatterns= {"*.me"}, initParams= {@WebInitParam(name="properties",value="C:\\\\Users\\\\GD\\\\eclipse-Shin\\\\jspstudy2\\\\WebContent\\\\WEB-INF\\\\method.properties")})
 
 public class ConreollerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

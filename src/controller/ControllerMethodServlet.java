@@ -21,8 +21,7 @@ import action.BoardAllAction;
 		urlPatterns={"*.bo"},
 		initParams={@WebInitParam(
 				name="properties",
-				//value="C:\\Users\\GD\\eclipse-Shin\\jspstudy2\\WebContent\\WEB-INF\\method.properties"
-				value="C:\\Users\\flwke\\Downloads\\SHINSEUNGBUM (2)\\WebContent\\WEB-INF\\method.properties"
+				value="C:\\Users\\GD\\eclipse-Shin\\jspstudy2\\WebContent\\WEB-INF\\method.properties"
 				)}
 		)
 public class ControllerMethodServlet extends HttpServlet {

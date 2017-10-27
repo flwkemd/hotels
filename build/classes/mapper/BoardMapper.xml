@@ -5,7 +5,7 @@
 	<select id="list" parameterType="map" resultType="Board">
 		select * from
 		(select rownum rnum, num, id,
-		date1, files, btype, btype, subtype,
+		date1, files, btype, subtype,
 		content, subject, readcnt, ref, reflevel, refstep from
 		( select * from board2
 		order by ref desc,refstep asc))
@@ -21,3 +21,4 @@
 	<!--<update id ="update2"> update board set subject=#{subject},content=#{content}, 
 		file1=#{file1} where num=#{num} -->
 </mapper>
+

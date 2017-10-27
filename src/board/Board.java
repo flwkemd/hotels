@@ -5,7 +5,7 @@ import java.util.Date;
 public class Board {
 	private int num;
 	private String id;
-	private Date date;
+	private Date date1;
 	private String files;
 	private String btype;
 	private String subtype;
@@ -19,11 +19,11 @@ public class Board {
 	public Board() {
 	}
 
-	public Board(int num, String id, Date date, String files, String btype, String subtype,
-			String content, String subject, int readcnt, int ref, int reflevel, int refstep) {
+	public Board(int num, String id, Date date1, String files, String btype, String subtype, String content,
+			String subject, int readcnt, int ref, int reflevel, int refstep) {
 		this.num = num;
 		this.id = id;
-		this.date = date;
+		this.date1 = date1;
 		this.files = files;
 		this.btype = btype;
 		this.subtype = subtype;
@@ -43,8 +43,8 @@ public class Board {
 		return id;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getDate1() {
+		return date1;
 	}
 
 	public String getFiles() {
@@ -91,8 +91,8 @@ public class Board {
 		this.id = id;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate1(Date date1) {
+		this.date1 = date1;
 	}
 
 	public void setFiles(String files) {

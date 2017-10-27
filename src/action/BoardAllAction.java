@@ -81,6 +81,217 @@ public class BoardAllAction {
 
 			return new ActionForward(false,"list.jsp");
 		}
+	
+	public ActionForward list2 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list2.jsp");
+	}
+	
+	public ActionForward list3 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list3.jsp");
+	}
+	
+	public ActionForward list4 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list4.jsp");
+	}
+	
+	public ActionForward list5 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list5.jsp");
+	}
+	
+	public ActionForward list6 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list6.jsp");
+	}
+	
+	public ActionForward list7 (HttpServletRequest request,HttpServletResponse response){
+		int pageNum = 1;
+		int limit = 10;
+		if(request.getParameter("pageNum") != null){
+			
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+		} 
+		BoardDao dao = new BoardDao();
+		int listcount = dao.boardCount();
+		List<Board> list=dao.list(pageNum, limit);
+		int maxpage = (int)((double)listcount/limit + 0.95);
+		int startpage = ((int)(pageNum/10.0+0.9)-1)*10+1;
+		int endpage = startpage+9;
+		if(endpage > maxpage) endpage = maxpage;
+		//기시물의 출력되는 번호
+		int boardNum = listcount - ((pageNum - 1)*limit);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("maxpage", maxpage);
+		// maxpage : 게시판에 필요한 페이지 수
+		request.setAttribute("startpage", startpage);
+		//startpage : 현재 페이지에 보여질 첫번째 페이지 번호
+		request.setAttribute("endpage", endpage);
+		//endpage : 현재 페이지에 보여질 마지막 페이지 번호
+		request.setAttribute("listcount", listcount);
+		
+		request.setAttribute("list", list);
+		//list: 현재 페이지에 출력될 게시물 목록
+		request.setAttribute("boardNum", boardNum);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(new Date());
+		request.setAttribute("today", today);
+		
+		return new ActionForward(false,"list7.jsp");
+	}
+	
 	public ActionForward info(HttpServletRequest request,HttpServletResponse response) {
 		int num = Integer.parseInt(request.getParameter("num"));
 		BoardDao dao = new BoardDao();
@@ -134,6 +345,7 @@ public class BoardAllAction {
 		try {
 			MultipartRequest multi = new MultipartRequest(request, path,5*1024*1024,"euc-kr");
 			int num= Integer.parseInt(multi.getParameter("num"));
+			String file2 = multi.getParameter("file2");
 			BoardDao dao = new BoardDao();
 			board.setNum(num);
 			board.setId(multi.getParameter("id"));
@@ -142,6 +354,9 @@ public class BoardAllAction {
 			board.setSubject(multi.getParameter("subject"));
 			board.setContent(multi.getParameter("content"));
 			board.setFiles(multi.getFilesystemName("files"));
+			if(board.getFiles() == null || board.getFiles().equals("")){
+				board.setFiles(multi.getParameter("file2"));
+			}
 			request.setAttribute("url", "updateForm.bo?num=" + num);
 				if(dao.update(board)) {
 					request.setAttribute("msg", "게시물 수정 완료");

@@ -32,7 +32,7 @@ public interface BoardMapper {
 			+ " where num=#{num}")
 	void Readcnt(int num);
 
-	@Update("update board2 set subject=#{subject}," + " content=#{content}, files=#{files} " + "where num=#{num}")
+	@Update("update board2 set  btype=#{btype}, subtype=#{subtype}, subject=#{subject}," + " content=#{content}, files=#{files} " + "where num=#{num}")
 	boolean update(Board board);
 
 	@Delete("delete from board2 where num=#{num}")

@@ -34,7 +34,7 @@
 
   <body>
 
-   <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
       <div class="container">
         <h3><a id="mainHome" class="navbar-brand" href="${path}/model2/member/main.me">Hotels</a></h3>
@@ -90,13 +90,9 @@
     
     
     <div class="container">
-    		<h4 style="padding-left: 150px;">강남구</h4>
     	<div class="row">
 			<div class="col-md-2">
-    			<h5><a href="#" id="menuItem">강남구</a></h5><br>
-    			<h5><a href="${path}/model2/board/list2.bo" id="menuItem">강북구</a></h5><br>
-    			<h5><a href="${path}/model2/board/list3.bo" id="menuItem">강서구</a></h5><br>
-    			<h5><a href="${path}/model2/board/list4.bo" id="menuItem">강동구</a></h5><br>
+    			<h5><a href="${path}/model2/board/list7.bo" id="menuItem">자유게시판</a></h5><br>
 			</div>
 			<div class="col-md-9">
 				<div class="table-board" id="tableList">
@@ -111,16 +107,11 @@
 				</thead>
 				<tbody>
 				<c:forEach var="board" items="${list }">
-				<c:if test="${board.subtype eq '1' }">
+				<c:if test="${board.btype eq '4' }">
 					<tr>
 						<td>${board.num}</td>
 						<td>${board.id}</td>
-						<td>
-							<c:forEach var="a" begin="1" end="${board.reflevel }">
-					            &nbsp;&nbsp;</c:forEach>
-					        <c:if test="${board.reflevel > 0 }">└</c:if>
-							<a href="info.bo?num=${board.num}&pageNum=${pageNum}">${board.subject }</a>
-						</td>
+						<td><a href="info.bo?num=${board.num}&pageNum=${pageNum}">${board.subject }</a></td>
 						<td>${board.readcnt}</td>
 					</tr>
 					</c:if>
@@ -133,9 +124,9 @@
     	<div class="row">
     		<div class="col-lg-12">
     		<div class="write" style="text-align:right">
-    		<c:if test="${!empty sessionScope.login }">
+    			<c:if test="${!empty sessionScope.login }">
 					<a href="${path}/model2/board/writeForm.bo">글 쓰기</a>
-			</c:if>
+				</c:if>
 				</div>
 				  <ul class="pagination justify-content-center">
 				  	 <c:if test="${pageNum <= 1 }">

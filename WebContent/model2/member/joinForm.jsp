@@ -20,32 +20,35 @@
     <!-- Custom styles -->
     <link href="../../css/custom.css" rel="stylesheet">
 
+	<script type="text/javascript">
+		function joinok(){
+			alert('회원가입이 완료되었습니다.');
+		}
+	</script>
   </head>
 
   <body>
 
-    <!-- Navigation -->
+   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
       <div class="container">
-        <h3><a id="mainHome" class="navbar-brand" href="#">Hotels</a></h3>
+        <h3><a id="mainHome" class="navbar-brand" href="${path}/model2/member/main.me">Hotels</a></h3>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-left">
             <li class="nav-item">
-              <a id="navSub" class="nav-link" href="#">호텔소개
-                <span class="sr-only">(current)</span>
-              </a>
+              <a id="navSub" class="nav-link" href="${path}/model2/board/list.bo">호텔소개</a>
             </li>
             <li class="nav-item">
-              <a id="navSub" class="nav-link" href="#">후기게시판</a>
+              <a id="navSub" class="nav-link" href="${path}/model2/board/list5.bo">후기게시판</a>
             </li>
             <li class="nav-item">
-              <a id="navSub" class="nav-link" href="#">Q&A</a>
+              <a id="navSub" class="nav-link" href="${path}/model2/board/list6.bo">Q&A</a>
             </li>
             <li class="nav-item">
-              <a id="navSub" class="nav-link" href="#">자유게시판</a>
+              <a id="navSub" class="nav-link" href="${path}/model2/board/list7.bo">자유게시판</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
@@ -106,7 +109,7 @@
                                 <div class="form-group">
                                     <input class="form-control" placeholder="전화번호를 입력해주세요" name="regnumber" type="text" maxlength="20">
                                 </div>
-								<input type="submit" value="가입완료" class="btn btn-lg btn-danger btn-block">
+								<input type="submit" value="가입완료" class="btn btn-lg btn-danger btn-block" onclick="joinok();">
                                 
                             </fieldset>
                         </form>

@@ -10,7 +10,7 @@ body {
 }
 
 #mainImg {
-    width: -webkit-fill-available;
+    width: inherit;
     padding-top:25px;
 }
 
@@ -73,4 +73,22 @@ body {
 
 #updateGroup{
 	display: -webkit-inline-box;
+}
+
+#menu{
+	padding-top: 90px;
+}
+
+#imgid{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+}
+
+#menuItem{
+	color:gray;
+}
+
+#content{
+	height:200px;
 }
